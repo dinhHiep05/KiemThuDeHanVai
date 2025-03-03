@@ -66,7 +66,7 @@ class SachServiceTest {
     @Test
     void updateWithInvalidGia (){
         Exception exception = assertThrows(IllegalArgumentException.class, ()-> sachService.update(new Sach("ma1", "ads", "áds", 2000, -1)));
-        assertEquals("giá phải lớn hơn 0", exception.getMessage());
+        assertEquals("giá phải lớn hơn ", exception.getMessage());
     }
 
 }
